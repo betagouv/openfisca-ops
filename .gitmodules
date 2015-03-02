@@ -1,0 +1,12 @@
+[submodule "openfisca/web-api"]
+	path = openfisca/web-api
+	url = https://github.com/sgmap/openfisca-web-api.git
+[submodule "openfisca/core"]
+	path = openfisca/core
+	url = https://github.com/openfisca/openfisca-core.git
+[submodule "openfisca/france"]
+	path = openfisca/france
+	url = https://github.com/openfisca/openfisca-france.git
+[submodule "openfisca/parsers"]
+	path = openfisca/parsers
+	url = https://github.com/openfisca/openfisca-parsers.git
