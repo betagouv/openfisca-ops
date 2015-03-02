@@ -25,3 +25,11 @@ This repository references specific versions of each part of OpenFisca, and exec
 > However, here, since there is no packaged version of each module, we uniquely reference them through a commit SHA with git [submodules](http://git-scm.com/docs/git-submodule).
 
 The tests come from the few tests that are available within each OpenFisca module, and from client applications that have created their own functional tests such as [`mes-aides`](https://github.com/sgmap/mes-aides-api). We aim at adding as many tests as possible to ensure maximal coverage.
+
+
+Usage
+-----
+
+```
+git clone https://github.com/sgmap/openfisca.git && openfisca/init.sh
+```
