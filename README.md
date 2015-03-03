@@ -31,5 +31,5 @@ Usage
 -----
 
 ```
-git clone https://github.com/sgmap/openfisca.git && openfisca/init.sh
+git clone https://github.com/sgmap/openfisca.git && openfisca/update.sh
 ```
