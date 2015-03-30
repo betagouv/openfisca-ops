@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd openfisca/france
+cd `dirname $0`/../openfisca/france
 
 git fetch --all
 
