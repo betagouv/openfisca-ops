@@ -11,5 +11,6 @@ fi
 git submodule sync
 git submodule update --init --recursive
 
+git submodule foreach make clean-pyc
 git submodule foreach python setup.py develop
 git submodule foreach pip install --editable .
