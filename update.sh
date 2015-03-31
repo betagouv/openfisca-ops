@@ -2,8 +2,12 @@
 
 cd `dirname $0`
 
-git checkout master
-git pull origin master
+if [[ $1 != '--dev' ]]  # allow testing new versions locally
+then
+	git checkout master
+	git pull origin master
+fi
+
 git submodule sync
 git submodule update --init --recursive
 
