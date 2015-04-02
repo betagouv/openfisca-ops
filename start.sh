@@ -1,1 +1,1 @@
-paster serve --reload openfisca/web-api/development-france.ini
+paster serve --reload `dirname $0`/openfisca/web-api/development-france.ini
