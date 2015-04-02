@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "swagger-tools": "^0.8.5"
+  },
+  "scripts": {
+    "test": "test/integration/formula.sh && test/integration/swagger.sh"
+  }
+}
