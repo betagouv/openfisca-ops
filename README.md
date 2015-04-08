@@ -30,6 +30,13 @@ The tests come from the few tests that are available within each OpenFisca modul
 Usage
 -----
 
+### Prerequisites
+
+- Execute the scripts matching your host machine in the `bootstrap` folder.
+
+
+### Run
+
 ```
 git clone https://github.com/sgmap/openfisca.git && openfisca/update.sh
 ```
