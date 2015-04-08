@@ -12,4 +12,4 @@ git submodule sync
 git submodule update --init --recursive
 
 git submodule foreach python setup.py develop
-git submodule foreach pip install --editable .
+git submodule foreach pip install --user --editable .
