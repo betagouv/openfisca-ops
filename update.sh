@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 cd `dirname $0`
 
 if [[ $1 != '--dev' ]]  # allow testing new versions locally
