@@ -1,1 +1,5 @@
-paster serve --reload `dirname $0`/openfisca/web-api/development-france.ini
+#!/bin/bash
+# 1st param = config name. Defaults to `development`.
+# Available configs are in `config` folder.
+
+paster serve --reload `dirname $0`/config/${1:-development}.ini
