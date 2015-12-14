@@ -6,8 +6,7 @@ set -ex
 
 cd `dirname $0`
 
-git checkout $TARGET_BRANCH
-git pull origin $TARGET_BRANCH
+git checkout --force origin/$TARGET_BRANCH
 
 git submodule sync
 git submodule update --init --recursive
