@@ -6,7 +6,9 @@ set -ex
 cd `dirname $0`
 
 if [[ -n $1 ]]
-then git checkout --force origin/$1
+then
+	git fetch origin
+	git checkout --force origin/$1
 fi
 
 git submodule sync
