@@ -6,12 +6,14 @@ This repository eases the deployment of a production [OpenFisca](http://openfisc
 Rationale
 ---------
 
-OpenFisca is comprised of four different parts:
+OpenFisca is comprised of four different parts, to which you can add optional [extensions](http://doc.openfisca.fr/contribute/extensions.html):
 
 - [`openfisca-core`](https://github.com/openfisca/openfisca-core)
 - [`openfisca-france`](https://github.com/openfisca/openfisca-france)
 - [`openfisca-parsers`](https://github.com/openfisca/openfisca-parsers)
 - [`openfisca-web-api`](https://github.com/openfisca/openfisca-web-api)
+
+Example of extension: [`openfisca-paris`](https://github.com/sgmap/openfisca-paris).
 
 At the time of writing, these parts are not packaged and lack a versioning strategy. This makes it pretty hard to deploy a stable instance for production matters.
 
@@ -19,7 +21,7 @@ At the time of writing, these parts are not packaged and lack a versioning strat
 Solution
 --------
 
-This repository references specific versions of each part of OpenFisca, and executes as many tests as possible on the resulting combination through continuous integration.
+This repository references specific versions of each part of OpenFisca (as well as the extensions to include in the instance) and executes as many tests as possible on the resulting combination through continuous integration.
 
 > You might know this approach from language-specific package managers. It is akin to a `gemfile.lock` or a `shrinkwrap` file.
 > However, here, since there is no packaged version of each module, we uniquely reference them through a commit SHA with git [submodules](http://git-scm.com/docs/git-submodule).
@@ -39,4 +41,10 @@ Usage
 
 ```
 git clone https://github.com/sgmap/openfisca.git && openfisca/update.sh
+```
+
+### Extensions
+To add an extension to this repository:
+```sh
+git submodule add $extension_repository openfisca/extensions/$extension_name
 ```
