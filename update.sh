@@ -19,6 +19,15 @@ fi
 git submodule sync
 git submodule update --init --recursive
 
+for submodule in core web-api france parsers
+do
+	cd openfisca/$submodule/
+	python setup.py develop $user_option
+	pip install $user_option --editable .
+	cd -
+done
 
-git submodule foreach python setup.py develop $user_option
-git submodule foreach pip install $user_option --editable .
+for extension in $(ls -d openfisca/extensions/*)
+do
+	ln -s $(pwd)/$extension openfisca/france/openfisca_france/model/extensions/
+done
