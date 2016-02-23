@@ -5,6 +5,11 @@ set -ex
 
 cd `dirname $0`
 
+if [[ ! $VIRTUAL_ENV ]]
+then
+	user_option='--user'
+fi
+
 if [[ -n $1 ]]
 then
 	git fetch origin
@@ -14,5 +19,6 @@ fi
 git submodule sync
 git submodule update --init --recursive
 
-git submodule foreach python setup.py develop --user
-git submodule foreach pip install --user --editable .
+
+git submodule foreach python setup.py develop $user_option
+git submodule foreach pip install $user_option --editable .
