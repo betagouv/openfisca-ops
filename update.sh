@@ -27,6 +27,11 @@ do
 	cd -
 done
 
+for old_symlink_extension in $(find openfisca/france/openfisca_france/model/extensions -type l)
+do
+	rm $old_symlink_extension
+done
+
 for extension in $(ls -d openfisca/extensions/*)
 do
 	ln -s $(pwd)/$extension openfisca/france/openfisca_france/model/extensions/
