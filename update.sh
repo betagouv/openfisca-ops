@@ -5,11 +5,6 @@ set -ex
 
 cd `dirname $0`
 
-if [[ ! $VIRTUAL_ENV ]]
-then
-	user_option='--user'
-fi
-
 if [[ -n $1 ]]
 then
 	git fetch origin
@@ -20,5 +15,9 @@ git submodule sync
 git submodule update --init --recursive
 
 
-git submodule foreach python setup.py develop $user_option
-git submodule foreach pip install $user_option --editable .
+for old_symlink_extension in $(find openfisca/france/openfisca_france/model/extensions -type l)
+do
+	rm $old_symlink_extension
+done
+
+git submodule foreach '$toplevel/install_submodule.sh $path $toplevel'
