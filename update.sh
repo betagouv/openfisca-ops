@@ -5,6 +5,7 @@ set -ex
 
 cd `dirname $0`
 
+# Sandbox the install to the virtualenv, or, if not available, to the user.
 if [[ ! $VIRTUAL_ENV ]]
 then
 	user_option='--user'
