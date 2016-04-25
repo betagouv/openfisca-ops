@@ -15,7 +15,7 @@ git submodule sync
 git submodule update --init --recursive
 
 
-for old_symlink_extension in $(find openfisca/france/openfisca_france/model/extensions/* -type dl)
+for old_symlink_extension in $(find openfisca/france/openfisca_france/model/extensions/* -type d -or -type l)
 do
 	rm -rf $old_symlink_extension
 done
