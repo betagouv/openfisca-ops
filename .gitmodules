@@ -10,3 +10,6 @@
 [submodule "openfisca/parsers"]
 	path = openfisca/parsers
 	url = https://github.com/openfisca/openfisca-parsers.git
+[submodule "openfisca/extensions/paris"]
+	path = openfisca/extensions/paris
+	url = https://github.com/sgmap/openfisca-paris.git
