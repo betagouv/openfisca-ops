@@ -1,6 +1,6 @@
-This repository eases the deployment of a production [OpenFisca](http://openfisca.fr) instance.
+This repository eases the deployment of the production [OpenFisca](http://openfisca.fr) instance used by mes-aides.gouv.fr.
 
-> Ce dépôt facilite le déploiement d'une instance d'[OpenFisca](http://openfisca.fr) en production.
+> Ce dépôt facilite le déploiement de l'instance d'[OpenFisca](http://openfisca.fr) utilisée en production pour mes-aides.gouv.fr.
 
 
 Rationale
@@ -40,7 +40,7 @@ Usage
 ### Run
 
 ```
-git clone https://github.com/sgmap/openfisca.git && openfisca/update.sh
+git clone https://github.com/sgmap/openfisca.git && openfisca/update.sh && openfisca/start.sh
 ```
 
 ### Extensions
