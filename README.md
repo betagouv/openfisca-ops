@@ -1,3 +1,13 @@
+# This repository is deprecated
+
+The official [OpenFisca documentation](https://doc.openfisca.fr/en/for_developers.html) now explains how to install OpenFisca and its stack.
+
+OpenFisca has started to be properly packaged mid-2016. At the end of 2016, we've been able to confirm that the [published packages](https://pypi.python.org/pypi/OpenFisca-France) work well and we switched [our products](https://github.com/sgmap/mes-aides-ui/pull/384/files#diff-b9cfc7f2cdf78a7f4b91a753d10865a2R76) to use `pip`. After 8 weeks without issues, this repository —which was working around the lack of packaging— is now deprecated.
+
+The text below still accurately describes what this repository does, but this workaround is not necessary anymore, and using it would be counterproductive.
+
+- - - - -
+
 This repository eases the deployment of a production [OpenFisca](http://openfisca.fr) instance.
 
 > Ce dépôt facilite le déploiement d'une instance d'[OpenFisca](http://openfisca.fr) en production.
